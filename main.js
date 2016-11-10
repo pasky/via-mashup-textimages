@@ -51,7 +51,7 @@ function spotlightAnnotate(response, cb) {
 }
 
 function spotlightQuery(cb) {
-	var ajaxRequest = $.ajax({ 'url': 'http://spotlight.dbpedia.org/rest/annotate',
+	var ajaxRequest = $.ajax({ 'url': 'http://spotlight.sztaki.hu:2222/rest/annotate',
 		'data': { 'text': $('#text').val(), 'confidence': 0.5, 'support': 20 },
 		'headers': {'Accept': 'application/json'},
 		'success': function(response) { spotlightAnnotate(response, cb); },
